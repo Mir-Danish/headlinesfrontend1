@@ -38,15 +38,7 @@ const Home = () => {
   const mainPost = postContainerNews[0];
 
   return (
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S43418BWFQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S43418BWFQ');
-</script>
+    
     <div className='main-container'>
       <div className='left-section'>
         
