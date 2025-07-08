@@ -36,7 +36,7 @@ const DetailsPage = () => {
         
         <div className="post-header">
           <div className="post-meta">
-            <span className="category">{post.category}</span>
+            {/* <span className="category">{post.category}</span> */}
             <span className="date">{post.date}</span>
             <span className="author">{post.author}</span>
           </div>
