@@ -3,7 +3,7 @@ import React from 'react';
 const Events = () => {
   return (
     <div className="events">
-      {/* <h1>Upcoming Events</h1> */}
+      <h1>Upcoming Events</h1>
       <div className="events-grid">
         <div className="event-card">
           {/* <h3>Press Conference</h3>
