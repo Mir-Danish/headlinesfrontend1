@@ -1,0 +1,351 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: auto;
+    min-height: 100vh;
+    padding: 20px;
+    margin-top: 15px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.main-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.left-section {
+    display: flex;
+    gap: 2rem;
+}
+
+.post-container{
+    width: 50rem;
+    height: 30rem;
+    margin-top: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.imagecontainer{
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageofpost{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.small-posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.small-posts {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 7rem;
+    padding: 16px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border-left: 4px solid #007bff;
+    margin-bottom: 8px;
+}
+
+.small-posts:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border-left: 4px solid #0056b3;
+}
+
+.post-content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    line-height: 1.3;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    width: 100%;
+    padding: 0;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.post-content p {
+    display: none;
+}
+
+.post-image {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    padding: 8px;
+    min-width: 120px;
+}
+
+.smallcontainerimages {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+    background: #eaeaea;
+}
+
+.latest-news-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.latest-news-section h2 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.latest-news-content {
+    min-height: 200px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.latestnewsposts{
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latestnewsposts:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.latestnewsposts h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.latestnewsposts p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .left-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .post-container {
+        width: 100%;
+        height: auto;
+        min-height: 23rem;
+    }
+    
+    .small-posts-section {
+        width: 100%;
+    }
+    
+    .small-posts {
+        width: 100%;
+        height: auto;
+        min-height: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .left-section {
+        gap: 1rem;
+    }
+    
+    .post-container {
+        width: 100%;
+        height: auto;
+        min-height: 20rem;
+        padding: 15px;
+    }
+    
+    .post-container h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .imageofpost {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .small-posts {
+        flex-direction: column;
+        height: auto;
+        min-height: 12rem;
+        padding: 15px;
+    }
+    
+    .post-content {
+        padding-right: 0;
+        padding-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .post-content h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+    
+    .post-content p {
+        display: none;
+    }
+    
+    .smallcontainerimages {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .post-image {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+    }
+    
+    .latest-news-section {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .latest-news-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .latestnewsposts {
+        padding: 12px;
+    }
+    
+    .latestnewsposts h3 {
+        font-size: 16px;
+    }
+    
+    .latestnewsposts p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 8px;
+        margin-top: 8px;
+    }
+    
+    .post-container {
+        padding: 10px;
+        min-height: 17rem;
+    }
+    
+    .post-container h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .small-posts {
+        padding: 12px;
+        min-height: 10rem;
+    }
+    
+    .post-content h3 {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    .post-content p {
+        display: none;
+    }
+    
+    .smallcontainerimages {
+        height: 120px;
+    }
+    
+    .latest-news-section {
+        padding: 12px;
+    }
+    
+    .latest-news-content {
+        padding: 8px;
+    }
+    
+    .latestnewsposts {
+        padding: 10px;
+    }
+    
+    .latestnewsposts h3 {
+        font-size: 15px;
+    }
+    
+    .latestnewsposts p {
+        font-size: 13px;
+    }
+}
+
+/* For two-line ellipsis on headings and content */
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 2.8em; /* 2 lines at 1.4em line-height */
+  line-height: 1.4em;
+}

@@ -1,0 +1,145 @@
+.Navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}   
+
+
+.navbar-links{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navbar-links li {
+    margin: 0;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #333;
+}
+
+.active {
+    font-weight: bold; 
+    color: beige;
+    background-color: #444;
+}
+
+.Logodesign {
+    width: 100px;
+    height: 35px;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .Logodesign {
+        width: 80px;
+        height: 28px;
+    }
+    
+    .navbar-links {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: black;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        gap: 1rem;
+    }
+    
+    .navbar-links.active {
+        left: 0;
+    }
+    
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar-links a {
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 18px;
+        border-radius: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Hamburger animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media (max-width: 480px) {
+    .Navbar {
+        padding: 0.5rem;
+    }
+    
+    .Logodesign {
+        width: 70px;
+        height: 25px;
+    }
+    
+    .navbar-links {
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    
+    .navbar-links a {
+        padding: 1rem;
+        font-size: 16px;
+    }
+}
